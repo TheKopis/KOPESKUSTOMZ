@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/webg.png.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures it fills the entire screen */
+  transform: scaleX(-1);
+  image-rendering: crisp-edges;
+  z-index: -2; /* Places it behind everything */
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: -1;
+}
+body {
+  /* background-color: #000000; */
+  background: url('/webg.png.jpg') no-repeat center center fixed;
+  position: relative;
+  image-rendering: crisp-edges;
+  background-size: cover;
+  color: #f8f1e4; /* Off-white text */
+  font-family:'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #222;
+  border-radius: 10px;
+}
+
+.logo {
+  height: 60px; /* Adjust size as needed */
+  width: 60px;
+  object-fit: cover;
+  border-radius:50%;
+}
+/* Apply Cyberpunk Font to Titles */
+h1, h2, h3, .site-title {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f8f1e4;
+}
+
+
+/* Book Appointment Button */
+.book-btn {
+  background: linear-gradient(135deg, #f8f1e4 0%, #ffffff 100%);
+  color: #111;
+  padding: 24px 48px;
+  border: none;
+  border-radius: 8px; /* Rounded button */
+  font-weight: bold;
+  animation: glowing 2s infinite alternate;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.5rem;
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f1e4 100%);
+}
+.book-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust spacing if needed */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #f8f1e4; /* Off-white */
+}
+
+/* Gallery */
+.gallery {
+  padding: 40px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Rounded corners */
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Pricing */
+.pricing {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.package {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  text-align: center;
+  color: #f8f1e4;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background: #222;
+  border-radius: 10px;
+  color: #f8f1e4;
+}
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #f8f1e4, #ffffff, #f8f1e4);
+  background-size: 200% 100%;
+  animation: gradient-flow 3s infinite alternate;
+  margin: 40px 0;
+  border-radius: 10px;
+}
+@keyframes textGlow {
+  0% { text-shadow: 0 0 5px #f8f1e4; }
+  50% { text-shadow: 0 0 20px #f8f1e4, 0 0 30px #ffffff77; }
+  100% { text-shadow: 0 0 5px #f8f1e4; }
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f8f1e4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: textGlow 2.5s infinite alternate;
+}
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.instagram-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+@media (max-width: 768px) {
+  .instagram-btn {
+    display: block;
+    margin: 0 auto; /* Centers it */
+    text-align: center;
+  }
+}
